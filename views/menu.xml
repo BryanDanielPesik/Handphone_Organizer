@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem 
+    id="handphone_menu_root" 
+    name="Handphone Org" 
+    sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem 
+    id="handphone_akomodasi_menu_categ" 
+    name="Type" 
+    parent="handphone_menu_root" 
+    sequence="10"/>
+
+     <!-- This Menu Item Must have a parent -->
+    <menuitem 
+    id="handphone_order_menu_categ" 
+    name="Order" 
+    parent="handphone_menu_root" 
+    sequence="20"/>
+
+     <!-- This Menu Item Must have a parent -->
+    <menuitem 
+    id="handphone_partner_menu_categ" 
+    name="Partner" 
+    parent="handphone_menu_root" 
+    sequence="30"/>
+
+</odoo>

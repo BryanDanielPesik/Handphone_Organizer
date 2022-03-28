@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- handphone.pengembalian tree view -->
+    <record id="handphone_pengembalian_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Pengembalian Barang</field>
+        <field name="model">handphone.pengembalian</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="order_id"/>
+                <field name="name"/>             
+                <field name="tagihan"/> 
+                <field name="tgl_pengembalian"/>      
+            </tree>
+        </field>
+    </record>
+
+    <!-- handphone.pengembalian form view -->
+    <record id="handphone_pengembalian_view_form" model="ir.ui.view">
+        <field name="name">Pengembalian Barang</field>
+        <field name="model">handphone.pengembalian</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="order_id"/>
+                        <field name="name"/>
+                    </group>
+                     <group>                        
+                        <field name="tgl_pengembalian"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="tagihan"/>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- handphone.pengembalian action window -->
+    <record id="handphone_pengembalian_action" model="ir.actions.act_window">
+        <field name="name">Pengembalian Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">handphone.pengembalian</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="handphone_pengembalian_menu_act" 
+        name="Pengembalian Barang" 
+        parent="handphone_order_menu_categ" 
+        action="handphone_pengembalian_action" 
+        sequence="20"/>
+
+</odoo>

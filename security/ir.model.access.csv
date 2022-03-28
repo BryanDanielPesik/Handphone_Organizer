@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_handphone_android,access.handphone.android,model_handphone_android,,1,1,1,1
+access_handphone_ios,access.handphone.ios,model_handphone_ios,,1,1,1,1
+access_handphone_order,access.handphone.order,model_handphone_order,,1,1,1,1
+access_handphone_orderandroiddetail,access.handphone.orderandroiddetail,model_handphone_orderandroiddetail,,1,1,1,1
+access_handphone_orderiosdetail,access.handphone.orderiosdetail,model_handphone_orderiosdetail,,1,1,1,1
+access_handphone_pengembalian,access.handphone.pengembalian,model_handphone_pengembalian,,1,1,1,1
+access_handphone_akunting,access.handphone.akunting,model_handphone_akunting,,1,1,1,1
+

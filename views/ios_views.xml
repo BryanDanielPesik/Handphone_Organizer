@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- handphone.ios tree view -->
+    <record id="handphone_ios_view_tree" model="ir.ui.view">
+        <field name="name">Ios</field>
+        <field name="model">handphone.ios</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="warna"/>
+                <field name="tipe"/>
+                <field name="stok"/>
+                <field name="harga"/>
+                <field name="img" widget="image"/>
+            
+            </tree>
+        </field>
+    </record>
+
+     <!-- handphone.ios form view -->
+    <record id="handphone_ios_view_form" model="ir.ui.view">
+        <field name="name">Form Hp</field>
+        <field name="model">handphone.ios</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="warna"/>
+                <field name="tipe"/>
+                <field name="stok"/>
+                <field name="harga"/>
+                <field name="img" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- handphone.ios action window -->
+    <record id="handphone_ios_action" model="ir.actions.act_window">
+        <field name="name">Daftar Handphone Ios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">handphone.ios</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+    id="handphone_ios_menu_act" 
+    name="Ios" 
+    parent="handphone_akomodasi_menu_categ" 
+    action="handphone_ios_action" 
+    sequence="20"/>
+
+</odoo>
