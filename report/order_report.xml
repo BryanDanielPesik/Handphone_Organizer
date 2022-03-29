@@ -33,6 +33,22 @@
                         </t>
                         </table>
                     </div>
+                    <div class="row">
+                        <table class="table-bordered">
+                                <tr>
+                                    <th>Jenis Handphone</th>
+                                    <th>Quantity</th>
+                                </tr>
+                        <t t-foreach="o.orderandroiddetail_ids" t-as="k">
+                            
+                                <tr>
+                                    <td><span t-esc="k.android_id.name"/></td>
+                                    <td><span t-esc="k.qty"/></td>
+                                </tr>                          
+                            
+                        </t>
+                        </table>
+                    </div>
                     </h3>
                 </div>
             </t>
