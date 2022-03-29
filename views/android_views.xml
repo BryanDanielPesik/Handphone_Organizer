@@ -9,6 +9,7 @@
                 <!-- Add your fields here -->
                 <field name="name"/>
                 <field name="warna"/>
+                <field name="deskripsi"/>
                 <field name="tipe"/>
                 <field name="stok"/>
                 <field name="harga"/>
@@ -28,6 +29,7 @@
                         <!-- Add your fields here -->
                 <field name="name"/>
                 <field name="warna"/>
+                <field name="deskripsi"/>
                 <field name="tipe"/>
                 <field name="stok"/>
                 <field name="harga"/>

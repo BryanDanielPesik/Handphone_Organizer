@@ -1,13 +1,9 @@
-
-
-
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 class Order(models.Model):
     _name = 'handphone.order'
     _description = 'New Description'
-
 
     orderandroiddetail_ids = fields.One2many(
         comodel_name='handphone.orderandroiddetail', 
@@ -46,7 +42,8 @@ class OrderAndroidDetail(models.Model):
     
         order_id = fields.Many2one(comodel_name='handphone.order', string='Order')
         android_id = fields.Many2one(comodel_name='handphone.android', string='Android')
-        
+
+    
 
         name = fields.Char(string='Name')
         harga = fields.Integer(compute='_compute_harga', string='harga')
