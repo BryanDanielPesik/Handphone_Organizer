@@ -42,6 +42,7 @@ class OrderAndroidDetail(models.Model):
     
         order_id = fields.Many2one(comodel_name='handphone.order', string='Order')
         android_id = fields.Many2one(comodel_name='handphone.android', string='Android')
+     
 
     
 
@@ -49,6 +50,13 @@ class OrderAndroidDetail(models.Model):
         harga = fields.Integer(compute='_compute_harga', string='harga')
         qty = fields.Integer(string='Quantity')
         harga_satuan = fields.Integer(compute='_compute_harga_satuan', string='harga_satuan')
+
+        tipe = fields.Char(compute='_compute_tipe', string='Tipe Storage')
+    
+        @api.depends('android_id')
+        def _compute_tipe(self):
+            for record in self:
+                record.tipe = record.android_id.tipe
     
         
         @api.depends('android_id')
@@ -79,7 +87,14 @@ class OrderIosDetail(models.Model):
             domain=[('stok','>','100')])
     
         name = fields.Char(string='Name')
-        harga_satuan = fields.Integer(compute='_compute_harga_satuan', string='harga_satuan')
+        harga_satuan = fields.Integer(compute='_compute_harga_satuan', string='harga_satuan')\
+        
+        tipe = fields.Char(compute='_compute_tipe', string='Tipe Storage')
+    
+        @api.depends('ios_id')
+        def _compute_tipe(self):
+            for record in self:
+                record.tipe = record.ios_id.tipe
     
         @api.depends('ios_id')
         def _compute_harga_satuan(self):

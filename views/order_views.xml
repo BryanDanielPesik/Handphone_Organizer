@@ -38,7 +38,8 @@
                         <field name="sudah_kembali"/>
                         <field name="orderandroiddetail_ids">
                             <tree editable='bottom'>
-                                <field name="android_id"/> 
+                                <field name="android_id"/>
+                                <field name="tipe"/>
                                 <field name="harga_satuan"/>
                                 <field name="qty"/>   
                                 <field name="harga" sum="Total"/>                                  
@@ -46,7 +47,8 @@
                         </field>
                         <field name="orderiosdetail_ids">
                             <tree editable='bottom'>
-                                <field name="ios_id"/>  
+                                <field name="ios_id"/>
+                                <field name="tipe"/>
                                 <field name="harga_satuan"/> 
                                 <field name="qty"/> 
                                 <field name="harga" sum="Total"/>                                        
